@@ -1,0 +1,9 @@
+{
+	"name": "serverlessNygy3",
+	"custom": {
+		"optimize": true
+	},
+	"plugins": [
+		"serverless-optimizer-plugin"
+	]
+}

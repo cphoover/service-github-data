@@ -1,0 +1,52 @@
+{
+	"name": "save-repos",
+	"runtime": "nodejs",
+	"customName": false,
+	"customRole": false,
+	"handler": "handler.handler",
+	"timeout": 6,
+	"memorySize": 1024,
+	"authorizer": {},
+	"custom": {
+		"excludePatterns": [],
+		"envVars": [],
+		"optimize": false
+	},
+	"plugins": [
+		"serverless-optimizer-plugin"
+	],
+	"endpoints": [{
+		"path": "repos",
+		"method": "POST",
+		"type": "AWS",
+		"authorizationType": "none",
+		"authorizerFunction": false,
+		"customAuthorizer": false,
+		"apiKeyRequired": false,
+		"requestParameters": {},
+		"requestTemplates" : { "application/json": "{\n \"body\" : $input.json('$'),\n \"headers\": {\n #foreach($header in $input.params().header.keySet())\n \"$header\": \"$util.escapeJavaScript($input.params().header.get($header))\" #if($foreach.hasNext),#end\n \n #end\n },\n \"method\": \"$context.httpMethod\",\n \"params\": {\n #foreach($param in $input.params().path.keySet())\n \"$param\": \"$util.escapeJavaScript($input.params().path.get($param))\" #if($foreach.hasNext),#end\n \n #end\n },\n \"query\": {\n #foreach($queryParam in $input.params().querystring.keySet())\n \"$queryParam\": \"$util.escapeJavaScript($input.params().querystring.get($queryParam))\" #if($foreach.hasNext),#end\n \n #end\n } \n}" },
+		"responses": {
+			"400": {
+				"statusCode": "400"
+			},
+			"default": {
+				"statusCode": "200",
+				"responseParameters": {},
+				"responseModels": {},
+				"responseTemplates": {
+					"application/json": ""
+				}
+			}
+		}
+	}],
+	"events": [],
+	"environment": {
+		"SERVERLESS_PROJECT": "serverlessNygy3",
+		"SERVERLESS_STAGE": "${stage}",
+		"SERVERLESS_REGION": "${region}"
+	},
+	"vpc": {
+		"securityGroupIds": [],
+		"subnetIds": []
+	}
+}

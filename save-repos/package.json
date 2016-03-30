@@ -1,0 +1,16 @@
+{
+  "name": "save-repos",
+  "version": "1.0.0",
+  "description": "",
+  "main": "handler.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "install": "^0.6.1",
+    "lambda-fn-save-repos": "git+ssh://git@github.com/cphoover/lambda-fn-save-repos.git#dev",
+    "nconf": "^0.8.4"
+  }
+}

@@ -1,9 +1,10 @@
 {
-	"name": "serverlessNygy3",
+	"name": "project-explorer-api",
 	"custom": {
 		"optimize": true
 	},
 	"plugins": [
-		"serverless-optimizer-plugin"
+		"serverless-optimizer-plugin",
+		"serverless-cors-plugin"
 	]
 }

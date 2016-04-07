@@ -1,0 +1,8 @@
+{
+	"repos" : [
+		{
+			"name" : "my test repo",
+			"git_url" : "git@github.com:cphoover/lambda-fn-save-repos.git"
+		}
+	]
+}

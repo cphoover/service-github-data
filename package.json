@@ -1,0 +1,22 @@
+{
+  "name": "service-github-data",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cphoover/service-github-data.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cphoover/service-github-data/issues"
+  },
+  "homepage": "https://github.com/cphoover/service-github-data#readme",
+  "dependencies": {
+    "serverless-cors-plugin": "^0.4.1"
+  }
+}

@@ -1,0 +1,11 @@
+{
+	"es" : {
+		"elasticsearch" : {
+			"signed" : true,
+			"host" : "search-project-explorer-l7x3jfq3y3syyi5jtfgcs5ae3e.us-east-1.es.amazonaws.com",
+			"region" : "us-east-1",
+			"index" : "github",
+			"type" : "repo"
+		}
+	}
+}
